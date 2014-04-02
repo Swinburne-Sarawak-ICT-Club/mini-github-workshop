@@ -1,0 +1,45 @@
+Basically using a file called ".gitconfig", you can modify the settings so that your proxy is set to it (until you change it again).
+
+---------------------------------------------------------------------------------------------------------------
+<WINDOWS ONLY> (For other OS, please find the file on your own ^.^)
+You can find this file in "C:\Users>[your_username_here]" (if C:\ is your default drive).
+Look for the .gitconfig file and open it with a text editor.
+---------------------------------------------------------------------------------------------------------------
+
+By default you should have something like
+
+[user]
+	name = Your Github Username
+	email = youremail@email.com
+
+------------------------
+
+To set the proxy settings (for Swinburne), add these lines of code to the file:
+
+[http]
+	proxy = http://wwwproxy.swinburne.edu.my:8000
+[url "https://"]
+	insteadOf = git://
+
+-----------------------
+
+So the end result would look like this:
+
+[user]
+	name = Your Github Username
+	email = youremail@email.com
+[http]
+	proxy = http://wwwproxy.swinburne.edu.my:8000
+[url "https://"]
+	insteadOf = git://
+
+-----------------------
+
+Remember! You must revert the file back to the original settings (without proxy) if you are not using SwinWifi. Otherwise, git will not work!
+
+Therefore, I personally recommend that you keep two files, one for Swinburne use, and one for non-Swinburne use. Just change the file names whenever you want to change it (you can even create a script/program to do this for you).
+
+My files: .gitconfig, .swingitconfig, .homegitconfig
+I can just change the names without having to worry! :)
+
+Have fun!
